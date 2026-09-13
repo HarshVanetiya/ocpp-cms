@@ -22,7 +22,8 @@
     "typecheck": "npm run typecheck --workspaces --if-present",
     "lint": "eslint .",
     "format": "prettier --write \"**/*.{ts,tsx,css,md,json}\"",
-    "contracts:openapi": "npm run openapi -w @ocpp/contracts"
+    "contracts:openapi": "npm run openapi -w @ocpp/contracts",
+    "docs:reference": "npm run docs:reference -w @ocpp/ocpp"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

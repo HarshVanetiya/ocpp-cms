@@ -155,7 +155,7 @@ export default function ProgressPage() {
                 </Badge>
               </div>
               <a
-                href={`https://github.com/HarshVanetiya/ocpp-cms/blob/main/docs/03-build-the-backend/milestone-${String(milestone).padStart(2, '0')}.md`}
+                href={`https://github.com/HarshVanetiya/ocpp-cms/blob/main/docs/03-build-the-backend/README.md#milestone-${milestone}`}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-1.5 text-[12px] text-ink-3 hover:text-accent"
