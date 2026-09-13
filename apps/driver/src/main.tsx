@@ -6,7 +6,9 @@ import { App } from './App';
 import './styles.css';
 
 async function bootstrap() {
-  if (LEARN_MODE) {
+  // The literal `import.meta.env.DEV` is what stops the mock chunk being
+  // emitted at all, not just made unreachable. See apps/dashboard/src/main.tsx.
+  if (import.meta.env.DEV && LEARN_MODE) {
     const { startMocks } = await import('@ocpp/mocks');
     await startMocks();
   }
