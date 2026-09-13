@@ -1,0 +1,50 @@
+{
+  "name": "ocpp-cms-workspace",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Learn-by-building OCPP 1.6J + 2.0.1 CPMS, Charge Point Simulator, OCPI and a Driver app.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n dashboard,simulator,driver -c cyan,magenta,green \"npm:dev -w @ocpp/dashboard\" \"npm:dev -w @ocpp/simulator\" \"npm:dev -w @ocpp/driver\"",
+    "dev:learn": "concurrently -n dashboard,simulator,driver -c cyan,magenta,green \"npm:dev:learn -w @ocpp/dashboard\" \"npm:dev:learn -w @ocpp/simulator\" \"npm:dev:learn -w @ocpp/driver\"",
+    "dev:dashboard": "npm run dev -w @ocpp/dashboard",
+    "dev:simulator": "npm run dev -w @ocpp/simulator",
+    "dev:driver": "npm run dev -w @ocpp/driver",
+    "build": "npm run build -w @ocpp/contracts && npm run build -w @ocpp/ocpp && npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "eslint .",
+    "format": "prettier --write \"**/*.{ts,tsx,css,md,json}\"",
+    "contracts:openapi": "npm run openapi -w @ocpp/contracts"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^24.13.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "concurrently": "^9.2.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.0",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "prettier": "^3.6.2",
+    "tsx": "^4.23.13",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.47.2",
+    "vite": "^8.3.0"
+  },
+  "msw": {
+    "workerDirectory": [
+      "apps/dashboard/public",
+      "apps/simulator/public",
+      "apps/driver/public"
+    ]
+  }
+}

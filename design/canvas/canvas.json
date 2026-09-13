@@ -1,0 +1,70 @@
+{
+  "artboards": [
+    {
+      "file": "Tokens.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 1500,
+      "title": "Design tokens"
+    },
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 1620,
+      "w": 1440,
+      "h": 900,
+      "title": "CPMS \u00b7 Overview"
+    },
+    {
+      "file": "LogInspector.dc.html",
+      "x": 1560,
+      "y": 1620,
+      "w": 1440,
+      "h": 900,
+      "title": "CPMS \u00b7 OCPP frame log"
+    },
+    {
+      "file": "Simulator.dc.html",
+      "x": 0,
+      "y": 2640,
+      "w": 1440,
+      "h": 900,
+      "title": "Simulator \u00b7 Station control"
+    },
+    {
+      "file": "DriverCharging.dc.html",
+      "x": 1560,
+      "y": 2640,
+      "w": 390,
+      "h": 844,
+      "title": "Driver \u00b7 Charging"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "note-system",
+      "x": 1560,
+      "y": 40,
+      "w": 340,
+      "text": "Spatial Solid\n\nOne visual language, three products.\n\nDepth comes from an opaque lightness step + a hairline + a 7% inner top highlight \u2014 never from transparency, so dense protocol data stays readable at every level.\n\nAccent mint is reserved for energy, charging and the primary action. Everything else is ink."
+    },
+    {
+      "id": "note-charts",
+      "x": 1980,
+      "y": 40,
+      "w": 340,
+      "text": "Chart marks use their own lightness band (OKLCH L 0.48\u20130.67 dark, 0.43\u20130.77 light), separate from the UI ink which is tuned for 4.5:1 text contrast.\n\nBoth palettes were run through the colorblind-separation validator: the 2-series protocol palette passes every check in both modes."
+    },
+    {
+      "id": "note-apps",
+      "x": 3060,
+      "y": 1620,
+      "w": 320,
+      "text": "The CPMS and the Simulator are separate products with separate interfaces \u2014 they only ever talk to each other over OCPP.\n\nThe simulator takes blue as its brand accent so you always know which window you are looking at."
+    }
+  ],
+  "launch": {
+    "view": "canvas"
+  }
+}

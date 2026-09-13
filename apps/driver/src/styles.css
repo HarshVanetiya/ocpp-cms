@@ -1,0 +1,48 @@
+@import '@ocpp/ui/styles/theme.css';
+@import 'maplibre-gl/dist/maplibre-gl.css';
+
+/**
+ * Tell Tailwind to scan the shared packages.
+ *
+ * Tailwind v4 auto-detects source files relative to the stylesheet, which means
+ * it only sees THIS app. Any utility class used exclusively inside
+ * `packages/ui` — `gap-x-7`, a one-off `max-w-[280px]` — would never be
+ * generated, and the component would silently render unstyled. Nothing warns
+ * you; the class is simply absent from the CSS.
+ *
+ * This is the single most common way a monorepo + Tailwind v4 setup breaks.
+ */
+@source '../../../packages/ui/src';
+
+
+/**
+ * Mobile-first, and it means it.
+ *
+ * The driver app is used one-handed, outdoors, often in the rain. Two rules
+ * follow from that and are enforced here rather than left to each component:
+ *
+ *  - Nothing interactive is smaller than 44px.
+ *  - The bottom of the screen is reserved for the safe area, so the primary
+ *    action never sits under a home indicator.
+ */
+@layer base {
+  body {
+    overscroll-behavior-y: none;
+  }
+
+  button,
+  a[role='button'] {
+    touch-action: manipulation;
+  }
+}
+
+.safe-bottom {
+  padding-bottom: max(14px, env(safe-area-inset-bottom));
+}
+
+.maplibregl-ctrl-attrib {
+  background: color-mix(in oklab, var(--color-surface-1) 85%, transparent) !important;
+  color: var(--color-ink-3) !important;
+  font-size: 10px !important;
+}
+.maplibregl-ctrl-attrib a { color: var(--color-ink-2) !important; }

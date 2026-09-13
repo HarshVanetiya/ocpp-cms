@@ -1,0 +1,27 @@
+@import '@ocpp/ui/styles/theme.css';
+
+/**
+ * Tell Tailwind to scan the shared packages.
+ *
+ * Tailwind v4 auto-detects source files relative to the stylesheet, which means
+ * it only sees THIS app. Any utility class used exclusively inside
+ * `packages/ui` — `gap-x-7`, a one-off `max-w-[280px]` — would never be
+ * generated, and the component would silently render unstyled. Nothing warns
+ * you; the class is simply absent from the CSS.
+ *
+ * This is the single most common way a monorepo + Tailwind v4 setup breaks.
+ */
+@source '../../../packages/ui/src';
+
+
+/**
+ * The simulator takes BLUE as its brand accent while the CPMS keeps mint.
+ *
+ * Same design system, different identity — so that with both apps open you can
+ * tell at a glance which window you are looking at. It is a one-token override
+ * rather than a second theme.
+ */
+[data-app='simulator'] {
+  --color-brand: var(--color-info);
+  --color-brand-soft: var(--color-info-soft);
+}

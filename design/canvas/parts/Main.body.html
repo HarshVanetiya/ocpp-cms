@@ -1,0 +1,368 @@
+<!--props:{"theme":{"editor":"enum","options":["dark","light"],"default":"dark","section":"Theme"},"$preview":{"width":1440,"height":900}}-->
+<div class="app" data-theme="{{theme}}" style="width: 1440px; height: 900px; background: var(--ground); color: var(--tx1); display: flex; overflow: hidden;">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside style="width: 232px; flex-shrink: 0; background: var(--s1); border-right: 1px solid var(--line-soft); display: flex; flex-direction: column;">
+    <div style="display: flex; align-items: center; gap: 10px; padding: 18px 18px 20px;">
+      <div style="width: 30px; height: 30px; border-radius: var(--r-sm); background: var(--accent); display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-1);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"></path></svg>
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <span class="disp" style="font-size: 14.5px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2;">Voltway</span>
+        <span style="font-size: 10.5px; color: var(--tx3); letter-spacing: 0.05em;">CPMS CONSOLE</span>
+      </div>
+    </div>
+
+    <nav style="display: flex; flex-direction: column; gap: 2px; padding: 0 12px; flex-grow: 1;">
+      <span style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.1em; color: var(--tx3); padding: 10px 8px 6px;">OPERATE</span>
+      <a style="display: flex; align-items: center; gap: 10px; height: 34px; padding: 0 10px; border-radius: var(--r-sm); background: var(--s3); color: var(--tx1); font-size: 13px; font-weight: 500; box-shadow: var(--shadow-1), inset 0 1px 0 var(--hi);">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1"></rect><rect x="14" y="3" width="7" height="5" rx="1"></rect><rect x="14" y="12" width="7" height="9" rx="1"></rect><rect x="3" y="16" width="7" height="5" rx="1"></rect></svg>
+        Overview
+      </a>
+      <a style="display: flex; align-items: center; gap: 10px; height: 34px; padding: 0 10px; border-radius: var(--r-sm); color: var(--tx2); font-size: 13px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="11" height="20" rx="2"></rect><path d="M19 8v8a2 2 0 0 1-4 0"></path><path d="M8 7h3"></path></svg>
+        Stations
+        <span class="tabular" style="margin-left: auto; font-size: 11px; color: var(--tx3);">198</span>
+      </a>
+      <a style="display: flex; align-items: center; gap: 10px; height: 34px; padding: 0 10px; border-radius: var(--r-sm); color: var(--tx2); font-size: 13px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 4-6 2v14l6-2 6 2 6-2V4l-6 2Z"></path><path d="M9 4v14"></path><path d="M15 6v14"></path></svg>
+        Map
+      </a>
+      <a style="display: flex; align-items: center; gap: 10px; height: 34px; padding: 0 10px; border-radius: var(--r-sm); color: var(--tx2); font-size: 13px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-8 4 16 3-8h4"></path></svg>
+        Sessions
+        <span style="margin-left: auto; display: inline-flex; align-items: center; gap: 5px; font-size: 11px; color: var(--accent); font-weight: 600;"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent);"></span>51</span>
+      </a>
+      <a style="display: flex; align-items: center; gap: 10px; height: 34px; padding: 0 10px; border-radius: var(--r-sm); color: var(--tx2); font-size: 13px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 8-4 4 4 4"></path><path d="m17 8 4 4-4 4"></path><path d="m14 4-4 16"></path></svg>
+        Live OCPP log
+      </a>
+
+      <span style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.1em; color: var(--tx3); padding: 16px 8px 6px;">MANAGE</span>
+      <a style="display: flex; align-items: center; gap: 10px; height: 34px; padding: 0 10px; border-radius: var(--r-sm); color: var(--tx2); font-size: 13px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0"></path><path d="M17 11a3 3 0 1 0-2-5.2"></path><path d="M18 20a5.5 5.5 0 0 0-2.5-4.6"></path></svg>
+        Users &amp; tokens
+      </a>
+      <a style="display: flex; align-items: center; gap: 10px; height: 34px; padding: 0 10px; border-radius: var(--r-sm); color: var(--tx2); font-size: 13px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0l-7.2-7.2A2 2 0 0 1 3 12V5a2 2 0 0 1 2-2h7a2 2 0 0 1 1.4.6l7.2 7.2a2 2 0 0 1 0 2.6Z"></path><circle cx="7.5" cy="7.5" r="1.2"></circle></svg>
+        Tariffs
+      </a>
+      <a style="display: flex; align-items: center; gap: 10px; height: 34px; padding: 0 10px; border-radius: var(--r-sm); color: var(--tx2); font-size: 13px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"></rect><path d="M2.5 10h19"></path></svg>
+        Billing &amp; CDRs
+      </a>
+      <a style="display: flex; align-items: center; gap: 10px; height: 34px; padding: 0 10px; border-radius: var(--r-sm); color: var(--tx2); font-size: 13px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"></circle><path d="M2.5 12h19"></path><path d="M12 2.5a15 15 0 0 1 0 19a15 15 0 0 1 0-19Z"></path></svg>
+        OCPI roaming
+        <span style="margin-left: auto; display: inline-flex; align-items: center; justify-content: center; min-width: 17px; height: 17px; padding: 0 5px; border-radius: var(--r-pill); background: var(--warn-soft); border: 1px solid var(--warn); color: var(--warn); font-size: 10px; font-weight: 600;">2</span>
+      </a>
+    </nav>
+
+    <div style="margin: 12px; padding: 11px 12px; border-radius: var(--r-md); background: var(--s2); border: 1px solid var(--line-soft);">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+        <span style="width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft);"></span>
+        <span style="font-size: 12px; font-weight: 600; color: var(--tx1);">Backend connected</span>
+      </div>
+      <div class="mono" style="font-size: 10.5px; color: var(--tx3); line-height: 1.5;">localhost:3000<br>ocpp1.6 &middot; ocpp2.0.1</div>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN ================= -->
+  <div style="flex-grow: 1; display: flex; flex-direction: column; min-width: 0;">
+
+    <header style="height: 60px; flex-shrink: 0; border-bottom: 1px solid var(--line-soft); background: var(--s1); display: flex; align-items: center; gap: 16px; padding: 0 24px;">
+      <h1 class="disp" style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.015em;">Overview</h1>
+      <div style="display: flex; align-items: center; gap: 3px; padding: 3px; border-radius: var(--r-sm); background: var(--s2); border: 1px solid var(--line-soft); margin-left: 8px;">
+        <span style="padding: 5px 11px; border-radius: var(--r-xs); color: var(--tx3); font-size: 12px; font-weight: 500;">1h</span>
+        <span style="padding: 5px 11px; border-radius: var(--r-xs); background: var(--s3); color: var(--tx1); font-size: 12px; font-weight: 600; box-shadow: var(--shadow-1);">24h</span>
+        <span style="padding: 5px 11px; border-radius: var(--r-xs); color: var(--tx3); font-size: 12px; font-weight: 500;">7d</span>
+        <span style="padding: 5px 11px; border-radius: var(--r-xs); color: var(--tx3); font-size: 12px; font-weight: 500;">30d</span>
+      </div>
+      <div style="flex-grow: 1;"></div>
+      <div style="display: flex; align-items: center; gap: 8px; width: 260px; height: 34px; padding: 0 11px; border-radius: var(--r-sm); background: var(--s2); border: 1px solid var(--line-soft);">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--tx3)" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+        <span style="font-size: 12.5px; color: var(--tx3);">Search stations, sessions, tokens</span>
+      </div>
+      <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--s3); border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; color: var(--tx2);">AK</div>
+    </header>
+
+    <div style="flex-grow: 1; padding: 22px 24px; display: flex; flex-direction: column; gap: 16px; min-height: 0;">
+
+      <!-- KPI ROW -->
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; flex-shrink: 0;">
+
+        <div class="panel" style="padding: 16px 18px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+            <span style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--tx3);">Stations online</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--tx3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="11" height="20" rx="2"></rect><path d="M19 8v8a2 2 0 0 1-4 0"></path></svg>
+          </div>
+          <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 12px;">
+            <div style="display: flex; flex-direction: column; gap: 5px;">
+              <div class="disp tabular" style="font-size: 30px; font-weight: 600; letter-spacing: -0.03em; line-height: 1;">186<span style="font-size: 15px; color: var(--tx3); font-weight: 500;">/198</span></div>
+              <span style="font-size: 11.5px; color: var(--tx2);">93.9% availability</span>
+            </div>
+            <svg width="84" height="26" viewBox="0 0 84 26" fill="none" style="flex-shrink: 0;"><path d="M0 24.5 L4.4 21.6 L8.8 23.1 L13.3 18.8 L17.7 15.9 L22.1 17.3 L26.5 14.4 L30.9 13 L35.4 15.9 L39.8 11.6 L44.2 10.1 L48.6 11.6 L53.1 8.7 L57.5 7.3 L61.9 8.7 L66.3 5.8 L70.7 4.4 L75.2 5.8 L79.6 2.9 L84 1.5" stroke="var(--c1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </div>
+        </div>
+
+        <div class="panel" style="padding: 16px 18px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+            <span style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--tx3);">Active sessions</span>
+            <span style="width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft);"></span>
+          </div>
+          <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 12px;">
+            <div style="display: flex; flex-direction: column; gap: 5px;">
+              <div class="disp tabular" style="font-size: 30px; font-weight: 600; letter-spacing: -0.03em; line-height: 1;">51</div>
+              <span style="display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px; color: var(--accent); font-weight: 500;">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 15 7-7 7 7"></path></svg>
+                18% vs yesterday
+              </span>
+            </div>
+            <svg width="84" height="26" viewBox="0 0 84 26" fill="none" style="flex-shrink: 0;"><path d="M0 24.5 L4.4 22.9 L8.8 24 L13.3 21.8 L17.7 19.6 L22.1 17.4 L26.5 19 L30.9 16.3 L35.4 14.1 L39.8 12.5 L44.2 14.6 L48.6 11.4 L53.1 9.7 L57.5 10.8 L61.9 8.1 L66.3 6.4 L70.7 8.6 L75.2 5.3 L79.6 3.7 L84 1.5" stroke="var(--c1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </div>
+        </div>
+
+        <div class="panel" style="padding: 16px 18px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+            <span style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--tx3);">Energy today</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--tx3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"></path></svg>
+          </div>
+          <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 12px;">
+            <div style="display: flex; flex-direction: column; gap: 5px;">
+              <div class="disp tabular" style="font-size: 30px; font-weight: 600; letter-spacing: -0.03em; line-height: 1;">1,284<span style="font-size: 15px; color: var(--tx3); font-weight: 500; margin-left: 3px;">kWh</span></div>
+              <span style="display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px; color: var(--accent); font-weight: 500;">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 15 7-7 7 7"></path></svg>
+                9.4% vs yesterday
+              </span>
+            </div>
+            <svg width="84" height="26" viewBox="0 0 84 26" fill="none" style="flex-shrink: 0;"><path d="M0 23.9 L4.4 24.5 L8.8 22.9 L13.3 20.4 L17.7 18.5 L22.1 19.1 L26.5 17.3 L30.9 14.4 L35.4 15.4 L39.8 13.5 L44.2 11.6 L48.6 12.2 L53.1 11 L57.5 8.1 L61.9 8.7 L66.3 6.5 L70.7 5 L75.2 5.9 L79.6 3.7 L84 1.5" stroke="var(--c1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </div>
+        </div>
+
+        <div class="panel" style="padding: 16px 18px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+            <span style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--tx3);">Revenue today</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--tx3)" stroke-width="2" stroke-linecap="round"><rect x="2.5" y="5" width="19" height="14" rx="2"></rect><path d="M2.5 10h19"></path></svg>
+          </div>
+          <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 12px;">
+            <div style="display: flex; flex-direction: column; gap: 5px;">
+              <div class="disp tabular" style="font-size: 30px; font-weight: 600; letter-spacing: -0.03em; line-height: 1;"><span style="font-size: 20px; color: var(--tx3); font-weight: 500;">&euro;</span>512.60</div>
+              <span style="font-size: 11.5px; color: var(--tx2);">&euro;10.05 average session</span>
+            </div>
+            <svg width="84" height="26" viewBox="0 0 84 26" fill="none" style="flex-shrink: 0;"><path d="M0 24.3 L4.4 24.5 L8.8 23.4 L13.3 20.9 L17.7 19 L22.1 19.6 L26.5 17.7 L30.9 14.9 L35.4 15.8 L39.8 13.8 L44.2 11.9 L48.6 12.6 L53.1 11.2 L57.5 8.3 L61.9 9 L66.3 6.7 L70.7 5.1 L75.2 6.1 L79.6 3.8 L84 1.5" stroke="var(--c1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHART + FLEET -->
+      <div style="display: flex; gap: 16px; flex-shrink: 0;">
+
+        <div class="panel" style="flex-grow: 1; padding: 18px 20px; min-width: 0;">
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 14px;">
+            <div>
+              <h2 class="disp" style="margin: 0 0 3px; font-size: 15.5px; font-weight: 600; letter-spacing: -0.01em;">Energy delivered</h2>
+              <p style="margin: 0; font-size: 12px; color: var(--tx3);">Last 24 hours, split by protocol version</p>
+            </div>
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <span style="display: inline-flex; align-items: center; gap: 7px; font-size: 12px; color: var(--tx2);"><span style="width: 9px; height: 9px; border-radius: 2px; background: var(--c1);"></span>OCPP 1.6J</span>
+              <span style="display: inline-flex; align-items: center; gap: 7px; font-size: 12px; color: var(--tx2);"><span style="width: 9px; height: 9px; border-radius: 2px; background: var(--c2);"></span>OCPP 2.0.1</span>
+            </div>
+          </div>
+
+          <svg width="700" height="220" viewBox="0 0 700 220" fill="none" style="display: block;">
+            <g stroke="var(--grid-line)" stroke-width="1">
+              <line x1="36" y1="0.5" x2="700" y2="0.5"></line>
+              <line x1="36" y1="49.5" x2="700" y2="49.5"></line>
+              <line x1="36" y1="98.5" x2="700" y2="98.5"></line>
+              <line x1="36" y1="147.5" x2="700" y2="147.5"></line>
+            </g>
+            <line x1="36" y1="196.5" x2="700" y2="196.5" stroke="var(--line)" stroke-width="1"></line>
+            <g font-family="var(--font-mono)" font-size="10" fill="var(--tx3)" text-anchor="end">
+              <text x="28" y="4">120</text><text x="28" y="53">90</text><text x="28" y="102">60</text><text x="28" y="151">30</text><text x="28" y="200">0</text>
+            </g>
+            <g transform="translate(36, 0)">
+              <path d="M0 173.7 L28.9 178.3 L57.7 181.1 L86.6 183 L115.5 181.8 L144.3 175.2 L173.2 159 L202.1 133.8 L231 118.3 L259.8 125.3 L288.7 134.2 L317.6 139.6 L346.4 138 L375.3 136 L404.2 133.6 L433 128.7 L461.9 114.6 L490.8 95.6 L519.7 79.2 L548.5 82.1 L577.4 100 L606.3 123.5 L635.1 146.2 L664 162.1 L664 196 L0 196 Z" fill="var(--c1-fill)"></path>
+              <path d="M0 161.5 L28.9 168.9 L57.7 173.5 L86.6 176.6 L115.5 175 L144.3 165.5 L173.2 142.2 L202.1 106.1 L231 84.1 L259.8 94.4 L288.7 107 L317.6 114.7 L346.4 112.1 L375.3 108.8 L404.2 104.9 L433 97.3 L461.9 76.2 L490.8 47.7 L519.7 23 L548.5 27 L577.4 53.2 L606.3 87.9 L635.1 121.5 L664 145.2 L664 162.1 L635.1 146.2 L606.3 123.5 L577.4 100 L548.5 82.1 L519.7 79.2 L490.8 95.6 L461.9 114.6 L433 128.7 L404.2 133.6 L375.3 136 L346.4 138 L317.6 139.6 L288.7 134.2 L259.8 125.3 L231 118.3 L202.1 133.8 L173.2 159 L144.3 175.2 L115.5 181.8 L86.6 183 L57.7 181.1 L28.9 178.3 L0 173.7 Z" fill="var(--c2-fill)"></path>
+              <path d="M0 161.5 L28.9 168.9 L57.7 173.5 L86.6 176.6 L115.5 175 L144.3 165.5 L173.2 142.2 L202.1 106.1 L231 84.1 L259.8 94.4 L288.7 107 L317.6 114.7 L346.4 112.1 L375.3 108.8 L404.2 104.9 L433 97.3 L461.9 76.2 L490.8 47.7 L519.7 23 L548.5 27 L577.4 53.2 L606.3 87.9 L635.1 121.5 L664 145.2" stroke="var(--c2)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+              <path d="M0 173.7 L28.9 178.3 L57.7 181.1 L86.6 183 L115.5 181.8 L144.3 175.2 L173.2 159 L202.1 133.8 L231 118.3 L259.8 125.3 L288.7 134.2 L317.6 139.6 L346.4 138 L375.3 136 L404.2 133.6 L433 128.7 L461.9 114.6 L490.8 95.6 L519.7 79.2 L548.5 82.1 L577.4 100 L606.3 123.5 L635.1 146.2 L664 162.1" stroke="var(--c1)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+              <line x1="519.7" y1="0" x2="519.7" y2="196" stroke="var(--tx3)" stroke-width="1" stroke-dasharray="3 3" opacity="0.55"></line>
+              <circle cx="519.7" cy="23" r="4" fill="var(--c2)" stroke="var(--s1)" stroke-width="2"></circle>
+              <circle cx="519.7" cy="79.2" r="4" fill="var(--c1)" stroke="var(--s1)" stroke-width="2"></circle>
+            </g>
+            <g font-family="var(--font-mono)" font-size="10" fill="var(--tx3)" text-anchor="middle">
+              <text x="36" y="213">00:00</text><text x="202" y="213">06:00</text><text x="368" y="213">12:00</text><text x="534" y="213">18:00</text><text x="700" y="213" text-anchor="end">23:00</text>
+            </g>
+          </svg>
+
+          <div style="position: relative; height: 0;">
+            <div style="position: absolute; left: 468px; top: -196px; padding: 9px 11px; border-radius: var(--r-sm); background: var(--s3); border: 1px solid var(--line); box-shadow: var(--shadow-3); min-width: 148px;">
+              <div class="mono" style="font-size: 10.5px; color: var(--tx3); margin-bottom: 6px;">Today 18:00</div>
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 3px;">
+                <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; color: var(--tx2);"><span style="width: 8px; height: 8px; border-radius: 2px; background: var(--c2);"></span>2.0.1</span>
+                <span class="mono tabular" style="font-size: 11.5px; color: var(--tx1); font-weight: 500;">35.2 kWh</span>
+              </div>
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px;">
+                <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; color: var(--tx2);"><span style="width: 8px; height: 8px; border-radius: 2px; background: var(--c1);"></span>1.6J</span>
+                <span class="mono tabular" style="font-size: 11.5px; color: var(--tx1); font-weight: 500;">71.6 kWh</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel" style="width: 380px; flex-shrink: 0; padding: 18px 20px;">
+          <h2 class="disp" style="margin: 0 0 3px; font-size: 15.5px; font-weight: 600; letter-spacing: -0.01em;">Connector state</h2>
+          <p style="margin: 0 0 16px; font-size: 12px; color: var(--tx3);">412 connectors across 198 stations</p>
+
+          <div style="display: flex; gap: 2px; height: 10px; margin-bottom: 18px;">
+            <div style="flex-grow: 238; background: var(--c1); border-radius: 4px 0 0 4px;"></div>
+            <div style="flex-grow: 51; background: var(--c2);"></div>
+            <div style="flex-grow: 47; background: var(--c5);"></div>
+            <div style="flex-grow: 61; background: var(--tx3); opacity: 0.5;"></div>
+            <div style="flex-grow: 15; background: var(--c4); border-radius: 0 4px 4px 0;"></div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 9px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="width: 9px; height: 9px; border-radius: 2px; background: var(--c1); flex-shrink: 0;"></span>
+              <span style="font-size: 12.5px; color: var(--tx2); flex-grow: 1;">Available</span>
+              <span class="mono tabular" style="font-size: 12.5px; color: var(--tx1); font-weight: 500;">238</span>
+              <span class="mono tabular" style="font-size: 11px; color: var(--tx3); width: 38px; text-align: right;">57.8%</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="width: 9px; height: 9px; border-radius: 2px; background: var(--c2); flex-shrink: 0;"></span>
+              <span style="font-size: 12.5px; color: var(--tx2); flex-grow: 1;">Charging</span>
+              <span class="mono tabular" style="font-size: 12.5px; color: var(--tx1); font-weight: 500;">51</span>
+              <span class="mono tabular" style="font-size: 11px; color: var(--tx3); width: 38px; text-align: right;">12.4%</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="width: 9px; height: 9px; border-radius: 2px; background: var(--c5); flex-shrink: 0;"></span>
+              <span style="font-size: 12.5px; color: var(--tx2); flex-grow: 1;">Preparing &amp; finishing</span>
+              <span class="mono tabular" style="font-size: 12.5px; color: var(--tx1); font-weight: 500;">47</span>
+              <span class="mono tabular" style="font-size: 11px; color: var(--tx3); width: 38px; text-align: right;">11.4%</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="width: 9px; height: 9px; border-radius: 2px; background: var(--tx3); opacity: 0.5; flex-shrink: 0;"></span>
+              <span style="font-size: 12.5px; color: var(--tx2); flex-grow: 1;">Unavailable</span>
+              <span class="mono tabular" style="font-size: 12.5px; color: var(--tx1); font-weight: 500;">61</span>
+              <span class="mono tabular" style="font-size: 11px; color: var(--tx3); width: 38px; text-align: right;">14.8%</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="width: 9px; height: 9px; border-radius: 2px; background: var(--c4); flex-shrink: 0;"></span>
+              <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--danger); flex-grow: 1; font-weight: 500;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 8v5"></path><path d="M12 17h.01"></path><circle cx="12" cy="12" r="9.5"></circle></svg>
+                Faulted
+              </span>
+              <span class="mono tabular" style="font-size: 12.5px; color: var(--tx1); font-weight: 500;">15</span>
+              <span class="mono tabular" style="font-size: 11px; color: var(--tx3); width: 38px; text-align: right;">3.6%</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line-soft); display: flex; gap: 20px;">
+            <div style="display: flex; flex-direction: column; gap: 3px;">
+              <span style="font-size: 11px; color: var(--tx3);">Utilisation</span>
+              <span class="disp tabular" style="font-size: 19px; font-weight: 600; letter-spacing: -0.02em;">23.8%</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 3px;">
+              <span style="font-size: 11px; color: var(--tx3);">Avg session</span>
+              <span class="disp tabular" style="font-size: 19px; font-weight: 600; letter-spacing: -0.02em;">47<span style="font-size: 13px; color: var(--tx3); font-weight: 500;"> min</span></span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 3px;">
+              <span style="font-size: 11px; color: var(--tx3);">Peak load</span>
+              <span class="disp tabular" style="font-size: 19px; font-weight: 600; letter-spacing: -0.02em;">418<span style="font-size: 13px; color: var(--tx3); font-weight: 500;"> kW</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACTIVITY + TOP STATIONS -->
+      <div style="display: flex; gap: 16px; flex-grow: 1; min-height: 0;">
+
+        <div class="panel" style="flex-grow: 1; padding: 18px 20px; min-width: 0; display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: center; gap: 9px; margin-bottom: 14px;">
+            <h2 class="disp" style="margin: 0; font-size: 15.5px; font-weight: 600; letter-spacing: -0.01em;">Live activity</h2>
+            <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft);"></span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 1px; overflow: hidden;">
+            <div style="display: flex; align-items: center; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line-soft);">
+              <span style="width: 26px; height: 26px; border-radius: var(--r-xs); background: var(--accent-soft); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"></path></svg></span>
+              <span style="font-size: 12.5px; color: var(--tx1); flex-grow: 1;">Session started &middot; <span class="mono" style="color: var(--tx2);">CP-AMS-0142</span> EVSE&nbsp;2</span>
+              <span style="font-size: 11.5px; color: var(--tx3);">Zoe Hartman</span>
+              <span class="mono tabular" style="font-size: 11px; color: var(--tx3); width: 44px; text-align: right;">just now</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line-soft);">
+              <span style="width: 26px; height: 26px; border-radius: var(--r-xs); background: var(--danger-soft); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--danger)" stroke-width="2.2" stroke-linecap="round"><path d="M12 8v5"></path><path d="M12 17h.01"></path><circle cx="12" cy="12" r="9.5"></circle></svg></span>
+              <span style="font-size: 12.5px; color: var(--tx1); flex-grow: 1;">Connector faulted &middot; <span class="mono" style="color: var(--tx2);">CP-RTM-0071</span> <span style="color: var(--tx3);">GroundFailure</span></span>
+              <span class="mono tabular" style="font-size: 11px; color: var(--tx3); width: 44px; text-align: right;">2m</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line-soft);">
+              <span style="width: 26px; height: 26px; border-radius: var(--r-xs); background: var(--info-soft); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--info)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 1 0-2.3 5.7"></path><path d="M20 5v6h-6"></path></svg></span>
+              <span style="font-size: 12.5px; color: var(--tx1); flex-grow: 1;">Remote start accepted &middot; <span class="mono" style="color: var(--tx2);">CP-UTR-0019</span></span>
+              <span style="font-size: 11.5px; color: var(--tx3);">via driver app</span>
+              <span class="mono tabular" style="font-size: 11px; color: var(--tx3); width: 44px; text-align: right;">4m</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line-soft);">
+              <span style="width: 26px; height: 26px; border-radius: var(--r-xs); background: var(--s2); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--tx3)" stroke-width="2.2" stroke-linecap="round"><rect x="2.5" y="5" width="19" height="14" rx="2"></rect><path d="M2.5 10h19"></path></svg></span>
+              <span style="font-size: 12.5px; color: var(--tx1); flex-grow: 1;">Payment captured &middot; <span class="mono tabular" style="color: var(--tx2);">&euro;14.20</span> of &euro;25.00 authorised</span>
+              <span class="mono tabular" style="font-size: 11px; color: var(--tx3); width: 44px; text-align: right;">6m</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line-soft);">
+              <span style="width: 26px; height: 26px; border-radius: var(--r-xs); background: var(--warn-soft); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--warn)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3"></path><path d="M12 18v3"></path><circle cx="12" cy="12" r="4"></circle><path d="M4 12H2"></path><path d="M22 12h-2"></path></svg></span>
+              <span style="font-size: 12.5px; color: var(--tx1); flex-grow: 1;">Authorisation rejected &middot; <span class="mono" style="color: var(--tx2);">04A1B2C3</span> <span style="color: var(--tx3);">Expired</span></span>
+              <span class="mono tabular" style="font-size: 11px; color: var(--tx3); width: 44px; text-align: right;">9m</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px; padding: 9px 0;">
+              <span style="width: 26px; height: 26px; border-radius: var(--r-xs); background: var(--s2); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--tx3)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v6h6"></path><path d="M20 20v-6h-6"></path><path d="M4 10a8 8 0 0 1 14-3"></path><path d="M20 14a8 8 0 0 1-14 3"></path></svg></span>
+              <span style="font-size: 12.5px; color: var(--tx1); flex-grow: 1;">Station reconnected &middot; <span class="mono" style="color: var(--tx2);">CP-EIN-0104</span> <span style="color: var(--tx3);">offline 14m</span></span>
+              <span class="mono tabular" style="font-size: 11px; color: var(--tx3); width: 44px; text-align: right;">12m</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel" style="width: 380px; flex-shrink: 0; padding: 18px 20px;">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 14px;">
+            <h2 class="disp" style="margin: 0; font-size: 15.5px; font-weight: 600; letter-spacing: -0.01em;">Busiest sites</h2>
+            <span style="font-size: 11.5px; color: var(--tx3);">30 days</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 13px;">
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px;">
+                <span style="font-size: 12.5px; color: var(--tx1); font-weight: 500;">Amsterdam Zuidas P3</span>
+                <span class="mono tabular" style="font-size: 12px; color: var(--tx2);">18.4 MWh</span>
+              </div>
+              <div style="height: 5px; border-radius: 3px; background: var(--s2); overflow: hidden;"><div style="width: 100%; height: 100%; background: var(--c1); border-radius: 3px;"></div></div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px;">
+                <span style="font-size: 12.5px; color: var(--tx1); font-weight: 500;">Rotterdam Kop van Zuid</span>
+                <span class="mono tabular" style="font-size: 12px; color: var(--tx2);">14.1 MWh</span>
+              </div>
+              <div style="height: 5px; border-radius: 3px; background: var(--s2); overflow: hidden;"><div style="width: 77%; height: 100%; background: var(--c1); border-radius: 3px;"></div></div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px;">
+                <span style="font-size: 12.5px; color: var(--tx1); font-weight: 500;">Utrecht Jaarbeurs</span>
+                <span class="mono tabular" style="font-size: 12px; color: var(--tx2);">11.8 MWh</span>
+              </div>
+              <div style="height: 5px; border-radius: 3px; background: var(--s2); overflow: hidden;"><div style="width: 64%; height: 100%; background: var(--c1); border-radius: 3px;"></div></div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px;">
+                <span style="font-size: 12.5px; color: var(--tx1); font-weight: 500;">Eindhoven Strijp-S</span>
+                <span class="mono tabular" style="font-size: 12px; color: var(--tx2);">9.2 MWh</span>
+              </div>
+              <div style="height: 5px; border-radius: 3px; background: var(--s2); overflow: hidden;"><div style="width: 50%; height: 100%; background: var(--c1); border-radius: 3px;"></div></div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px;">
+                <span style="font-size: 12.5px; color: var(--tx1); font-weight: 500;">Den Haag Centraal P2</span>
+                <span class="mono tabular" style="font-size: 12px; color: var(--tx2);">7.6 MWh</span>
+              </div>
+              <div style="height: 5px; border-radius: 3px; background: var(--s2); overflow: hidden;"><div style="width: 41%; height: 100%; background: var(--c1); border-radius: 3px;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

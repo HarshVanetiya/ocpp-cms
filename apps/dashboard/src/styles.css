@@ -1,0 +1,63 @@
+@import '@ocpp/ui/styles/theme.css';
+@import 'maplibre-gl/dist/maplibre-gl.css';
+
+/**
+ * Tell Tailwind to scan the shared packages.
+ *
+ * Tailwind v4 auto-detects source files relative to the stylesheet, which means
+ * it only sees THIS app. Any utility class used exclusively inside
+ * `packages/ui` — `gap-x-7`, a one-off `max-w-[280px]` — would never be
+ * generated, and the component would silently render unstyled. Nothing warns
+ * you; the class is simply absent from the CSS.
+ *
+ * This is the single most common way a monorepo + Tailwind v4 setup breaks.
+ */
+@source '../../../packages/ui/src';
+
+
+/**
+ * Map chrome, themed.
+ *
+ * MapLibre ships light-mode controls. Rather than fight its stylesheet we
+ * re-skin the few pieces that show, using the same tokens as everything else.
+ */
+.maplibregl-ctrl-group {
+  background: var(--color-surface-1) !important;
+  border: 1px solid var(--color-line) !important;
+  border-radius: var(--radius-sm) !important;
+  box-shadow: var(--shadow-2) !important;
+}
+.maplibregl-ctrl-group button + button {
+  border-top: 1px solid var(--color-line-soft) !important;
+}
+.maplibregl-ctrl-group button span {
+  filter: var(--map-icon-filter, none);
+}
+[data-theme='dark'] {
+  --map-icon-filter: invert(1) opacity(0.8);
+}
+.maplibregl-ctrl-attrib {
+  background: color-mix(in oklab, var(--color-surface-1) 85%, transparent) !important;
+  color: var(--color-ink-3) !important;
+  font-size: 10px !important;
+}
+.maplibregl-ctrl-attrib a {
+  color: var(--color-ink-2) !important;
+}
+.maplibregl-popup-content {
+  background: var(--color-surface-3) !important;
+  color: var(--color-ink-1) !important;
+  border: 1px solid var(--color-line) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-3) !important;
+  padding: 0 !important;
+}
+.maplibregl-popup-tip {
+  border-top-color: var(--color-surface-3) !important;
+  border-bottom-color: var(--color-surface-3) !important;
+}
+.maplibregl-popup-close-button {
+  color: var(--color-ink-3) !important;
+  font-size: 18px !important;
+  padding: 2px 7px !important;
+}

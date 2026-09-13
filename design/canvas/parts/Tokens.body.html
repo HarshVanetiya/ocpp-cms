@@ -1,0 +1,206 @@
+<!--props:{"theme":{"editor":"enum","options":["dark","light"],"default":"dark","section":"Theme"},"$preview":{"width":1440,"height":1240}}-->
+<div class="app" data-theme="{{theme}}" style="width: 1440px; min-height: 1240px; background: var(--ground); color: var(--tx1); padding: 48px 56px 56px;">
+
+  <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; padding-bottom: 28px; border-bottom: 1px solid var(--line-soft);">
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div style="width: 30px; height: 30px; border-radius: var(--r-sm); background: var(--accent); display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-1);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"></path></svg>
+        </div>
+        <span class="disp" style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--tx3);">Design system</span>
+      </div>
+      <h1 class="disp" style="margin: 0; font-size: 44px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.05;">Spatial Solid</h1>
+      <p style="margin: 0; max-width: 620px; font-size: 15px; line-height: 1.6; color: var(--tx2);">Layered depth with opaque surfaces. Elevation comes from a lightness step, a hairline border and a single top highlight &mdash; never from transparency, so dense data stays legible at every level.</p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 8px; align-items: flex-end;">
+      <span style="font-size: 12px; color: var(--tx3); letter-spacing: 0.06em; text-transform: uppercase;">Surface ladder</span>
+      <div style="display: flex; align-items: flex-end; gap: 0;">
+        <div style="width: 46px; height: 34px; background: var(--ground); border: 1px solid var(--line-soft); border-right: 0; border-radius: var(--r-sm) 0 0 var(--r-sm);"></div>
+        <div style="width: 46px; height: 46px; background: var(--s1); border: 1px solid var(--line-soft); border-right: 0;"></div>
+        <div style="width: 46px; height: 58px; background: var(--s2); border: 1px solid var(--line-soft); border-right: 0;"></div>
+        <div style="width: 46px; height: 70px; background: var(--s3); border: 1px solid var(--line); border-radius: 0 var(--r-sm) var(--r-sm) 0; box-shadow: var(--shadow-2), inset 0 1px 0 var(--hi);"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: 32px;">
+
+    <!-- Surfaces -->
+    <section class="panel" style="padding: 24px;">
+      <h2 class="disp" style="margin: 0 0 4px; font-size: 17px; font-weight: 600; letter-spacing: -0.01em;">Surfaces &amp; lines</h2>
+      <p style="margin: 0 0 20px; font-size: 13px; color: var(--tx3); line-height: 1.5;">Four opaque steps. Each level adds roughly 0.04 lightness, one hairline, and one 7% inner top highlight.</p>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div style="width: 64px; height: 40px; border-radius: var(--r-sm); background: var(--ground); border: 1px solid var(--line-soft); flex-shrink: 0;"></div>
+          <div style="display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 13px; font-weight: 500;">ground</span><span class="mono" style="font-size: 11px; color: var(--tx3);">app background</span></div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div style="width: 64px; height: 40px; border-radius: var(--r-sm); background: var(--s1); border: 1px solid var(--line-soft); flex-shrink: 0; box-shadow: inset 0 1px 0 var(--hi);"></div>
+          <div style="display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 13px; font-weight: 500;">surface-1</span><span class="mono" style="font-size: 11px; color: var(--tx3);">panels, cards, sidebar</span></div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div style="width: 64px; height: 40px; border-radius: var(--r-sm); background: var(--s2); border: 1px solid var(--line-soft); flex-shrink: 0; box-shadow: inset 0 1px 0 var(--hi);"></div>
+          <div style="display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 13px; font-weight: 500;">surface-2</span><span class="mono" style="font-size: 11px; color: var(--tx3);">nested cards, inputs, rows</span></div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div style="width: 64px; height: 40px; border-radius: var(--r-sm); background: var(--s3); border: 1px solid var(--line); flex-shrink: 0; box-shadow: var(--shadow-2), inset 0 1px 0 var(--hi);"></div>
+          <div style="display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 13px; font-weight: 500;">surface-3</span><span class="mono" style="font-size: 11px; color: var(--tx3);">popovers, menus, dialogs</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Text + accent -->
+    <section class="panel" style="padding: 24px;">
+      <h2 class="disp" style="margin: 0 0 4px; font-size: 17px; font-weight: 600; letter-spacing: -0.01em;">Ink &amp; accent</h2>
+      <p style="margin: 0 0 20px; font-size: 13px; color: var(--tx3); line-height: 1.5;">One accent, used only for energy, charging and the primary action. Status hues share its chroma so nothing shouts louder than anything else.</p>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="display: flex; gap: 10px;">
+          <div style="flex-grow: 1; padding: 12px 14px; border-radius: var(--r-sm); background: var(--s2); border: 1px solid var(--line-soft);">
+            <div style="font-size: 15px; font-weight: 600; color: var(--tx1);">Primary ink</div>
+            <div class="mono" style="font-size: 11px; color: var(--tx3); margin-top: 3px;">text-1</div>
+          </div>
+          <div style="flex-grow: 1; padding: 12px 14px; border-radius: var(--r-sm); background: var(--s2); border: 1px solid var(--line-soft);">
+            <div style="font-size: 15px; font-weight: 500; color: var(--tx2);">Secondary</div>
+            <div class="mono" style="font-size: 11px; color: var(--tx3); margin-top: 3px;">text-2</div>
+          </div>
+          <div style="flex-grow: 1; padding: 12px 14px; border-radius: var(--r-sm); background: var(--s2); border: 1px solid var(--line-soft);">
+            <div style="font-size: 15px; font-weight: 500; color: var(--tx3);">Muted</div>
+            <div class="mono" style="font-size: 11px; color: var(--tx3); margin-top: 3px;">text-3</div>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px;">
+          <div style="display: flex; flex-direction: column; gap: 7px;">
+            <div style="height: 44px; border-radius: var(--r-sm); background: var(--accent); box-shadow: var(--shadow-1);"></div>
+            <span class="mono" style="font-size: 10.5px; color: var(--tx3);">accent</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 7px;">
+            <div style="height: 44px; border-radius: var(--r-sm); background: var(--info); box-shadow: var(--shadow-1);"></div>
+            <span class="mono" style="font-size: 10.5px; color: var(--tx3);">info</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 7px;">
+            <div style="height: 44px; border-radius: var(--r-sm); background: var(--warn); box-shadow: var(--shadow-1);"></div>
+            <span class="mono" style="font-size: 10.5px; color: var(--tx3);">warn</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 7px;">
+            <div style="height: 44px; border-radius: var(--r-sm); background: var(--danger); box-shadow: var(--shadow-1);"></div>
+            <span class="mono" style="font-size: 10.5px; color: var(--tx3);">danger</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 7px;">
+            <div style="height: 44px; border-radius: var(--r-sm); background: var(--violet); box-shadow: var(--shadow-1);"></div>
+            <span class="mono" style="font-size: 10.5px; color: var(--tx3);">reserved</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Typography -->
+    <section class="panel" style="padding: 24px; grid-column: span 2;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 20px; margin-bottom: 20px;">
+        <div>
+          <h2 class="disp" style="margin: 0 0 4px; font-size: 17px; font-weight: 600; letter-spacing: -0.01em;">Type</h2>
+          <p style="margin: 0; font-size: 13px; color: var(--tx3); line-height: 1.5;">Space Grotesk carries headings and every number that matters. IBM Plex Sans carries reading text. JetBrains Mono carries anything that came off the wire.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px;">
+        <div style="display: flex; flex-direction: column; gap: 14px; padding-right: 24px; border-right: 1px solid var(--line-soft);">
+          <span class="mono" style="font-size: 11px; color: var(--tx3); letter-spacing: 0.05em;">DISPLAY / Space Grotesk</span>
+          <div class="disp" style="font-size: 34px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.1;">Fleet overview</div>
+          <div class="disp tabular" style="font-size: 40px; font-weight: 600; letter-spacing: -0.03em; line-height: 1;">1,284<span style="font-size: 18px; font-weight: 500; color: var(--tx3); margin-left: 6px;">kWh</span></div>
+          <div class="disp" style="font-size: 17px; font-weight: 600; letter-spacing: -0.01em;">Section heading</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px; padding-right: 24px; border-right: 1px solid var(--line-soft);">
+          <span class="mono" style="font-size: 11px; color: var(--tx3); letter-spacing: 0.05em;">BODY / IBM Plex Sans</span>
+          <div style="font-size: 15px; line-height: 1.65; color: var(--tx1);">A charge point opens one WebSocket and keeps it open for years. Everything you see here rides that single connection.</div>
+          <div style="font-size: 13px; line-height: 1.6; color: var(--tx2);">Secondary body, 13px &mdash; table cells, helper text, descriptions.</div>
+          <div style="font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tx3); font-weight: 600;">Label / overline</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <span class="mono" style="font-size: 11px; color: var(--tx3); letter-spacing: 0.05em;">MONO / JetBrains Mono</span>
+          <div class="mono" style="font-size: 13px; line-height: 1.7; color: var(--tx1);">BootNotification</div>
+          <div class="mono" style="font-size: 12px; line-height: 1.7; color: var(--tx2); background: var(--s2); border: 1px solid var(--line-soft); border-radius: var(--r-xs); padding: 10px 12px; white-space: pre;">[2,"a41f-8c","Heartbeat",{}]</div>
+          <div class="mono tabular" style="font-size: 12px; color: var(--tx3);">CP-AMS-0142 &middot; 43 ms</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Status vocabulary -->
+    <section class="panel" style="padding: 24px; grid-column: span 2;">
+      <h2 class="disp" style="margin: 0 0 4px; font-size: 17px; font-weight: 600; letter-spacing: -0.01em;">Connector status</h2>
+      <p style="margin: 0 0 20px; font-size: 13px; color: var(--tx3); line-height: 1.5;">Nine canonical states, shared by both protocol versions. A filled dot means energy is moving; a ring means it is not.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+        <span style="display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px 7px 11px; border-radius: var(--r-pill); background: var(--accent-soft); border: 1px solid var(--accent); font-size: 12.5px; font-weight: 500; color: var(--accent);"><span style="width: 7px; height: 7px; border-radius: 50%; border: 1.5px solid currentColor;"></span>Available</span>
+        <span style="display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px 7px 11px; border-radius: var(--r-pill); background: var(--info-soft); border: 1px solid var(--info); font-size: 12.5px; font-weight: 500; color: var(--info);"><span style="width: 7px; height: 7px; border-radius: 50%; border: 1.5px solid currentColor;"></span>Preparing</span>
+        <span style="display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px 7px 11px; border-radius: var(--r-pill); background: var(--accent); border: 1px solid var(--accent); font-size: 12.5px; font-weight: 600; color: var(--accent-ink);"><span style="width: 7px; height: 7px; border-radius: 50%; background: currentColor;"></span>Charging</span>
+        <span style="display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px 7px 11px; border-radius: var(--r-pill); background: var(--warn-soft); border: 1px solid var(--warn); font-size: 12.5px; font-weight: 500; color: var(--warn);"><span style="width: 7px; height: 7px; border-radius: 50%; border: 1.5px solid currentColor;"></span>Suspended&nbsp;(EV)</span>
+        <span style="display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px 7px 11px; border-radius: var(--r-pill); background: var(--warn-soft); border: 1px solid var(--warn); font-size: 12.5px; font-weight: 500; color: var(--warn);"><span style="width: 7px; height: 7px; border-radius: 50%; border: 1.5px solid currentColor;"></span>Suspended&nbsp;(EVSE)</span>
+        <span style="display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px 7px 11px; border-radius: var(--r-pill); background: var(--info-soft); border: 1px solid var(--info); font-size: 12.5px; font-weight: 500; color: var(--info);"><span style="width: 7px; height: 7px; border-radius: 50%; border: 1.5px solid currentColor;"></span>Finishing</span>
+        <span style="display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px 7px 11px; border-radius: var(--r-pill); background: var(--violet-soft); border: 1px solid var(--violet); font-size: 12.5px; font-weight: 500; color: var(--violet);"><span style="width: 7px; height: 7px; border-radius: 50%; border: 1.5px solid currentColor;"></span>Reserved</span>
+        <span style="display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px 7px 11px; border-radius: var(--r-pill); background: var(--s2); border: 1px solid var(--line); font-size: 12.5px; font-weight: 500; color: var(--tx3);"><span style="width: 7px; height: 7px; border-radius: 50%; border: 1.5px solid currentColor;"></span>Unavailable</span>
+        <span style="display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px 7px 11px; border-radius: var(--r-pill); background: var(--danger-soft); border: 1px solid var(--danger); font-size: 12.5px; font-weight: 500; color: var(--danger);"><span style="width: 7px; height: 7px; border-radius: 50%; background: currentColor;"></span>Faulted</span>
+      </div>
+    </section>
+
+    <!-- Controls -->
+    <section class="panel" style="padding: 24px;">
+      <h2 class="disp" style="margin: 0 0 20px; font-size: 17px; font-weight: 600; letter-spacing: -0.01em;">Controls</h2>
+      <div style="display: flex; flex-direction: column; gap: 18px;">
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px;">
+          <button style="display: inline-flex; align-items: center; gap: 7px; height: 36px; padding: 0 16px; border: 1px solid var(--accent); border-radius: var(--r-sm); background: var(--accent); color: var(--accent-ink); font-family: var(--font-body); font-size: 13.5px; font-weight: 600; cursor: pointer; box-shadow: var(--shadow-1);">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"></path></svg>
+            Start charge
+          </button>
+          <button style="display: inline-flex; align-items: center; height: 36px; padding: 0 16px; border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--s2); color: var(--tx1); font-family: var(--font-body); font-size: 13.5px; font-weight: 500; cursor: pointer; box-shadow: inset 0 1px 0 var(--hi);">Secondary</button>
+          <button style="display: inline-flex; align-items: center; height: 36px; padding: 0 16px; border: 1px solid transparent; border-radius: var(--r-sm); background: transparent; color: var(--tx2); font-family: var(--font-body); font-size: 13.5px; font-weight: 500; cursor: pointer;">Ghost</button>
+          <button style="display: inline-flex; align-items: center; height: 36px; padding: 0 16px; border: 1px solid var(--danger); border-radius: var(--r-sm); background: transparent; color: var(--danger); font-family: var(--font-body); font-size: 13.5px; font-weight: 500; cursor: pointer;">Reset station</button>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 6px;">
+            <label style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--tx3);">Station identity</label>
+            <div style="display: flex; align-items: center; height: 38px; padding: 0 12px; border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--s2); box-shadow: inset 0 1px 2px rgba(0,0,0,0.12);">
+              <span class="mono" style="font-size: 13px; color: var(--tx1);">CP-AMS-0142</span>
+            </div>
+          </div>
+          <div style="width: 150px; display: flex; flex-direction: column; gap: 6px;">
+            <label style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--tx3);">Protocol</label>
+            <div style="display: flex; align-items: center; justify-content: space-between; height: 38px; padding: 0 12px; border: 1px solid var(--accent); border-radius: var(--r-sm); background: var(--s2); box-shadow: 0 0 0 3px var(--accent-soft);">
+              <span style="font-size: 13px; color: var(--tx1);">OCPP 1.6J</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--tx3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 4px; padding: 4px; border-radius: var(--r-sm); background: var(--s2); border: 1px solid var(--line-soft); align-self: flex-start;">
+          <span style="padding: 6px 14px; border-radius: var(--r-xs); background: var(--s3); color: var(--tx1); font-size: 12.5px; font-weight: 600; box-shadow: var(--shadow-1);">All</span>
+          <span style="padding: 6px 14px; border-radius: var(--r-xs); color: var(--tx3); font-size: 12.5px; font-weight: 500;">1.6J</span>
+          <span style="padding: 6px 14px; border-radius: var(--r-xs); color: var(--tx3); font-size: 12.5px; font-weight: 500;">2.0.1</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Elevation + radius -->
+    <section class="panel" style="padding: 24px;">
+      <h2 class="disp" style="margin: 0 0 20px; font-size: 17px; font-weight: 600; letter-spacing: -0.01em;">Elevation &amp; radius</h2>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-bottom: 22px;">
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="height: 62px; border-radius: var(--r-md); background: var(--s2); border: 1px solid var(--line-soft); box-shadow: var(--shadow-1), inset 0 1px 0 var(--hi);"></div>
+          <span class="mono" style="font-size: 10.5px; color: var(--tx3);">shadow-1 &middot; rows</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="height: 62px; border-radius: var(--r-md); background: var(--s2); border: 1px solid var(--line-soft); box-shadow: var(--shadow-2), inset 0 1px 0 var(--hi);"></div>
+          <span class="mono" style="font-size: 10.5px; color: var(--tx3);">shadow-2 &middot; panels</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="height: 62px; border-radius: var(--r-md); background: var(--s3); border: 1px solid var(--line); box-shadow: var(--shadow-3), inset 0 1px 0 var(--hi);"></div>
+          <span class="mono" style="font-size: 10.5px; color: var(--tx3);">shadow-3 &middot; overlays</span>
+        </div>
+      </div>
+      <div style="display: flex; align-items: flex-end; gap: 12px;">
+        <div style="display: flex; flex-direction: column; gap: 8px; align-items: center;"><div style="width: 54px; height: 46px; border-radius: var(--r-xs); background: var(--s2); border: 1px solid var(--line);"></div><span class="mono" style="font-size: 10.5px; color: var(--tx3);">6</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px; align-items: center;"><div style="width: 54px; height: 46px; border-radius: var(--r-sm); background: var(--s2); border: 1px solid var(--line);"></div><span class="mono" style="font-size: 10.5px; color: var(--tx3);">8</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px; align-items: center;"><div style="width: 54px; height: 46px; border-radius: var(--r-md); background: var(--s2); border: 1px solid var(--line);"></div><span class="mono" style="font-size: 10.5px; color: var(--tx3);">10</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px; align-items: center;"><div style="width: 54px; height: 46px; border-radius: var(--r-lg); background: var(--s2); border: 1px solid var(--line);"></div><span class="mono" style="font-size: 10.5px; color: var(--tx3);">14</span></div>
+        <div style="display: flex; flex-direction: column; gap: 8px; align-items: center;"><div style="width: 54px; height: 46px; border-radius: var(--r-pill); background: var(--s2); border: 1px solid var(--line);"></div><span class="mono" style="font-size: 10.5px; color: var(--tx3);">pill</span></div>
+      </div>
+    </section>
+
+  </div>
+</div>
