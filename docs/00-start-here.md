@@ -160,6 +160,10 @@ Honest numbers, assuming you are comfortable programming but new to OCPP:
 | 9–11 | Logs, tariffs, payments, the driver flow | a weekend |
 | 12–13 | OCPI roaming and security | a weekend |
 
+Add roughly a day for **[the simulator service](08-build-the-simulator/README.md)**,
+which you start once Milestone 3 is done. It is the other side of the protocol
+and it is what every "prove it works" section from Milestone 5 onward relies on.
+
 You do not have to do all of it. Stop wherever you like — but read the
 [interview prep](07-interview-prep.md) either way, because it tells you which
 parts of what you built are the ones worth talking about.

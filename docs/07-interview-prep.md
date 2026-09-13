@@ -293,9 +293,9 @@ Order matters. This sequence builds tension and resolves it.
    `Occupied`, show the UI saying Preparing, then start the transaction and
    show it becoming Charging with no new StatusNotification. *"The status did
    not change; my interpretation of it did."*
-5. **Remote start with auto-plug off** — command sits at `accepted`, nothing
-   charges. Then plug in and watch it flip to `succeeded`. *"The Accepted
-   reply is not the answer."*
+5. **Remote start with the cable unplugged** — the command sits at
+   `accepted`, nothing charges. Then plug in and watch it flip to
+   `succeeded`. *"The Accepted reply is not the answer."*
 6. **The driver app** — type €5, charge, watch it stop itself at budget, show
    the itemised receipt.
 

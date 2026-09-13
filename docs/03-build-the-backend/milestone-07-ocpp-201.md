@@ -748,9 +748,9 @@ instead. Same outcome, different confidence.
 
 ### 4. The offline replay
 
-Use the simulator's **Go offline** control on the 2.0.1 station mid-charge, let
-it run for a minute, then bring it back. It replays the buffered
-`TransactionEvent`s with `offline: true`.
+Press **Disconnect** on the 2.0.1 station mid-charge, leave it a minute, then
+press **Connect** again. It replays the buffered `TransactionEvent`s with
+`offline: true`.
 
 ```sql
 SELECT measured_at FROM meter_values

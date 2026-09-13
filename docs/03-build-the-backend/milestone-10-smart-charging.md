@@ -491,8 +491,14 @@ station detail page set a 7 kW limit.
 ```
 
 Then watch the session's power chart in the dashboard drop to ~7 kW within a
-couple of meter values. The simulator honours charging profiles — that is
-deliberate, so this is a real test and not a mock.
+couple of meter values.
+
+> **This only works if your simulator honours the profile.** That is
+> [Milestone S3](../08-build-the-simulator/README.md#s3): the simulated station
+> clamps its charging power to the lowest applicable limit, exactly as real
+> hardware does. Build that first or you are testing nothing — the profile
+> will be Accepted and the power will not move, and you will not be able to
+> tell whether your CPMS or your test rig is wrong.
 
 ### 2. Contention
 
@@ -509,8 +515,9 @@ site total must never exceed 45 kW (50 × 0.9).
 
 ### 3. The taper case
 
-Set one simulated car to taper to 5 kW (high SoC). With three cars and a 50 kW
-site:
+Start a session on a station whose simulated car is near full — the simulator's
+taper curve (also [Milestone S3](../08-build-the-simulator/README.md#s3)) drops
+its draw to about 5 kW above 80% SoC. With three cars and a 50 kW site:
 
 - the tapering car gets ~6 kW, not 15,
 - the other two get ~19 kW each.

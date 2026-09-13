@@ -1044,7 +1044,7 @@ app.post('/sessions/:id/stop', async (request) => {
 ## Prove it works
 
 Start everything: your server, the frontend (`npm run dev:learn`), and the
-simulator (`npm run dev:sim`). Connect a virtual 1.6 station.
+simulator (`npm run dev:simulator`). Connect a virtual 1.6 station.
 
 ### 1. Reset
 
@@ -1066,7 +1066,8 @@ correlation does not. Check that the boot handler calls `markEffect`.
 
 ### 2. Remote start, the honest way
 
-Set the simulator station's **auto-plug** behaviour to off, then send a remote
+With the cable **not** plugged in — the simulator's `Plug in cable` action is
+manual, so a freshly connected station is already in this state — send a remote
 start from the dashboard.
 
 - The command goes `accepted` and **stays there**.
@@ -1097,7 +1098,7 @@ Then confirm the station actually heartbeats every 60 seconds instead of 300.
 | Do this | Expect |
 |---|---|
 | Send any command to an offline station | `409 STATION_OFFLINE`, row recorded as `failed` |
-| Use the simulator's "never answer" fault injection | `timeout` after `CALL_TIMEOUT_MS`, no leaked map entry |
+| Turn on the station's **Ignore remote commands** fault | `timeout` after `CALL_TIMEOUT_MS`, no leaked map entry |
 | Send `{"command":"reset","payload":{}}` | `400 VALIDATION_FAILED` — and **no** command row is written |
 | Unlock a connector mid-charge | `rejected`, because the station refuses to unlock a live cable |
 

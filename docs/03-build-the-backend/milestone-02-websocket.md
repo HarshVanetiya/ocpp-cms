@@ -285,6 +285,13 @@ Your server logs `station connected`.
 http://localhost:5174, select `SIM-AMS-001`, check the CSMS URL says
 `ws://localhost:3000/ocpp`, and press **Connect**.
 
+> **This needs the simulator service running on port 3100**, which you have
+> not built yet. Under `npm run dev:learn` the simulator UI is answered by
+> mocks, so **Connect** looks like it works and no WebSocket reaches your
+> server. Use `wscat` for now, and build
+> [the simulator](../08-build-the-simulator/README.md) once Milestone 3 is
+> done — it takes about an evening to get to a station that really connects.
+
 Your terminal:
 
 ```

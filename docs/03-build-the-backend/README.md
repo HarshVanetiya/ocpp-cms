@@ -42,6 +42,18 @@ you describe it to someone.
 <a id="milestone-9"></a><a id="milestone-10"></a><a id="milestone-11"></a>
 <a id="milestone-12"></a><a id="milestone-13"></a>
 
+### The other side of the wire
+
+From Milestone 3 onward you need something to talk to, and `wscat` runs out of
+road quickly. **[Chapter 08 builds the simulator service](../08-build-the-simulator/README.md)**
+— the program that pretends to be a charge point. Five short milestones,
+numbered S0–S4 so they do not collide with these, and the first three are worth
+doing as soon as your CSMS can answer a CALL.
+
+Writing the sending side of the protocol is also the fastest way to learn it:
+handling a message teaches you its shape, producing one teaches you why the
+field is there.
+
 ### Where to stop
 
 **Milestone 8 is the finish line for most people.** At that point you have a

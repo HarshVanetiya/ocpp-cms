@@ -88,6 +88,7 @@ along you are.
 | **[05 · Deployment](docs/05-deployment/README.md)** | Docker, Kubernetes, and what breaks in production |
 | **[06 · Scaling](docs/06-scaling/README.md)** | From one box to a national network |
 | **[07 · Interview prep](docs/07-interview-prep.md)** | The questions you will be asked, and good answers |
+| **[08 · Build the simulator](docs/08-build-the-simulator/README.md)** | The other side of the wire — start it after Milestone 3 |
 
 ---
 
