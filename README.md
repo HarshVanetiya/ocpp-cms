@@ -3,6 +3,8 @@
 A complete, professional-grade **frontend** for an EV charging platform, plus a
 hand-held guide to building the **backend** yourself.
 
+> **How this was built:** the three frontend apps, the API contract, the mock backend and the milestone guide were generated with [Claude Code](https://claude.com/claude-code), Anthropic's AI coding agent. The real backend is the part still to be built.
+
 You get three working web apps and a precise API contract. You write the server
 that answers it. By the end you will have built a Charge Point Management System
 that speaks **OCPP 1.6J and OCPP 2.0.1 at the same time**, a charge point
